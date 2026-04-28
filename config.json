@@ -1,0 +1,52 @@
+{
+  "simulation_duration": 200,
+  "time_step": 1,
+  "environment_settings": {
+    "grid_size": [50, 50],
+    "terrain_type": "grassland",
+    "resource_regeneration_rate": {
+      "food": 0.05
+    },
+    "max_resources": {
+      "food": 5000
+    }
+  },
+  "organisms": [
+    {
+      "species": "Plant",
+      "initial_population": 100,
+      "initial_params": {
+        "growth_rate": 0.2,
+        "energy_value": 10,
+        "max_size": 1
+      }
+    },
+    {
+      "species": "Herbivore",
+      "initial_population": 20,
+      "initial_params": {
+        "energy": 100,
+        "max_energy": 200,
+        "reproduction_threshold": 150,
+        "energy_cost_per_step": 2,
+        "max_age": 50,
+        "speed": 5,
+        "detection_radius": 10
+      }
+    },
+    {
+      "species": "Carnivore",
+      "initial_population": 5,
+      "initial_params": {
+        "energy": 150,
+        "max_energy": 300,
+        "reproduction_threshold": 200,
+        "energy_cost_per_step": 5,
+        "max_age": 70,
+        "speed": 7,
+        "detection_radius": 15,
+        "hunt_chance": 0.7
+      }
+    }
+  ]
+}
